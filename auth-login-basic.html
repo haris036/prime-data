@@ -251,8 +251,15 @@
             console.log(data);
             if (data != "")
             {
+              if (data[0].password == pass)
+              {
               location.href = 'index_d.html';
-              // alert("Oopss! User already exists with same email id);
+              // alert("Oopss! User already exists with same email id");
+              }
+              else
+              {
+                alert("Incorrect username or password");
+              }
             }
             else
             {

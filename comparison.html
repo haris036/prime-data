@@ -168,7 +168,7 @@
                 <div data-i18n="Analytics">Single Listing</div>
               </a>
             </li>
-            <li class="menu-item active">
+            <li class="menu-item ">
               <a href="calculator.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-calculator"></i>
                 <div data-i18n="Analytics">Calculator</div>
@@ -180,7 +180,7 @@
                 <div data-i18n="Analytics">Calendar</div>
               </a>
             </li>
-           <li class="menu-item">
+            <li class="menu-item active">
               <a href="comparison.html" class="menu-link">
                 <i class='bx'></i>
                 <i class="menu-icon tf-icons bx bxs-directions"></i>
@@ -235,171 +235,370 @@
           <div class="content-wrapper "  >
             <!-- Content -->
             
-            <div id="calculator_spinner_loading"  class="container-xxl flex-grow-1 container-p-y">
-              <br><br>
-            <div class="row">
-                <!-- Large -->
-                <div class="col-4"></div>
-                <div class="col-4">
-                  
-                  <div class="preloader">
-                    <div class="preloader__square"></div>
-                    <div class="preloader__square"></div>
-                    <div class="preloader__square"></div>
-                    <div class="preloader__square"></div>
-                  </div>
-                  <div class="status"><h1 style="padding-left: 30px;">Loading<span class="status__dot">.</span><span class="status__dot">.</span><span class="status__dot">.</span></h1></div>
-
-                </div>
-                <div class="col-4"></div>
-            </div>
-          </div>
+            
 
 
-            <div class="container-xxl flex-grow-1 container-p-y" id="Calculator_main">
-              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> Profit Calculator</h4>
+            <div class="container-xxl flex-grow-1 container-p-y" id="comparison_main">
+              <!-- <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> Profit Calculator</h4> -->
 
               <!-- Basic Layout -->
               <div class="row">
                 <div class="col-xl">
                   <div class="card mb-4">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                      <h5 class="mb-0">How much customer pays</h5>
-                      <small class="text-muted float-end"></small>
+                    <br>
+                    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                      <div class="nav-item d-flex align-items-center">
+                        <button id="search_btn_comparison_1" class="btn" onclick="get_comparison_data1()"><i class="bx bx-search fs-4 lh-0"></i></button>
+                        <input
+                          type="search"
+                          class="form-control border-1"
+                          placeholder="Search..."
+                          aria-label="Search..."
+                          id="Search_text_comparison1"
+                        />
+                      </div>
                     </div>
-                    <div class="card-body">
-                      <form>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-default-fullname">Price</label>
-                          <input type="number" class="form-control" id="Price"  min="0" value="0" step="any" />
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-default-company">Shipping Pirce</label>
-                          <input type="number" class="form-control" id="Shipping_P"  min="0" value="0" step="any"/>
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-default-email">Coupon/Discount (%)</label>
-                           <input type="number" class="form-control" id="Discount"  min="0" value="0" step="any" />
-                          <div id="cust_price" style="text-align: right;">Price (incl. Shipping) $0.00</div>
-                          <div id="discounted_price" style="text-align: right;">After discount: $0.00</div>
-                        </div>
 
-                        <h5 class="mb-0">Your Cost</h5>
-                        <br>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-default-phone">Labour Cost</label>
-                           <input type="number" class="form-control" id="Labour_C"  min="0" value="0" step="any"/>
+
+                    <div id="compasrion_spinner_loading1"  class="container-xxl flex-grow-1 container-p-y">
+                      <br><br>
+                    <div class="row">
+                        <!-- Large -->
+                        <div class="col-2"></div>
+                        <div class="col-10">
+                          
+                            <div class="preloader">
+                            <div class="preloader__square"></div>
+                            <div class="preloader__square"></div>
+                            <div class="preloader__square"></div>
+                            <div class="preloader__square"></div>
+                          </div>
+                          <!-- <div class="status"><h1 style="padding-left: 30px;">Loading<span class="status__dot">.</span><span class="status__dot">.</span><span class="status__dot">.</span></h1></div> -->
+
                         </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-default-phone">Material Cost</label>
-                           <input type="number" class="form-control" id="Material_C"  min="0" value="0" step="any" />
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-default-phone">Shipping Cost</label>
-                           <input type="number" class="form-control" id="Shipping_C"  min="0" value="0" step="any" />                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-default-phone">Esty Ads</label>
-                           <input type="number" class="form-control" id="Esty_Ads"  min="0" value="0" step="any" />
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-default-phone">Renewing</label>
-                           <input type="number" class="form-control" id="Renewing"  min="0" value="0" step="any" />
-                        </div>
-                        <div id="total_cost"  style="text-align: right;">Price (incl. Shipping) $0.00</div>
-                        
-                      </form>
-                      <button onclick="calculator()" class="btn btn-primary">Calculate</button>
+                        <!-- <div class="col-4"></div> -->
                     </div>
+                  </div>
+
+                    <div id="temp1">
+                      <br><br><br>
+                      <h1 align="center"> 1</h1>
+                      <br><br><br>
+                    </div>
+
+                    <div id="main1">
+                      <div class="card-body">
+                      <div class="row">   
+                        <div class="col-2"></div>
+                            <div class="col-10">
+                              <div class="row">
+                                <div id="cross1" class=" col-3"><img src="assets/img/icons/cross.png" style="width: 30px; height: 30px;"></div>
+                                <div id="tick1" class=" col-3"><img src="assets/img/icons/tick.png" style="width: 50px; height: 50px;"></div>
+                                 <div class=" col-9"><h4>Long Tail</h4></div>
+                               </div>  
+                             </div>
+                           </div>
+                      <!-- <div class="col-4"></div> -->
+                      </div>
+
+                      <div class="card-body">
+                        <div><h3>Searches</h3></div>
+                        <div class="row">
+                              <div align="center">
+                                   <div><h4 id="searches_1"></h4></div>
+                               </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body">
+                        <div><h3>Engagement</h3></div>
+                        <div class="row">
+                              <div align="center">
+                                   <div><h4 id="Engagement_1"></h4></div>
+                               </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body">
+                        <div><h3>Lowest Price</h3></div>
+                        <div class="row">
+                              <div align="center">
+                                   <div><h4 id="l_price_1"></h4></div>
+                               </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body">
+                        <div><h3>Average Price</h3></div>
+                        <div class="row">
+                              <div align="center">
+                                   <div><h4 id="m_price_1"></h4></div>
+                               </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body">
+                        <div><h3>Highest Price</h3></div>
+                        <div class="row">
+                              <div align="center">
+                                   <div><h4 id="h_price_1"></h4></div>
+                               </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body">
+                        <div><h3>Top Tags</h3></div>
+                        <div class="row">
+                              <div align="center">
+                                   <div><h4><ol id="top_tags_1"></ol></h4></div>
+                               </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  
+
+
                   </div>
                 </div>
                 <div class="col-xl">
                   <div class="card mb-4">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                      <h5 class="mb-0">Fees and Taxes</h5>
-                      <small class="text-muted float-end"></small>
-                    </div>
-                    <div class="card-body">
-                      <form>
-                        <div class="mb-3">
-                          <label class="form-label" for="basic-icon-default-fullname">Offsite Ads Fee</label>
-                          <div class="form-check form-check-inline mt-3">
-                            <input
-                              class="form-check-input"
-                              type="radio"
-                              name="inlineRadioOptions"
-                              id="inlineRadio1"
-                              value="0"
-                              checked
-                            />
-                            <label class="form-check-label" for="inlineRadio1">0%</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input
-                              class="form-check-input"
-                              type="radio"
-                              name="inlineRadioOptions"
-                              id="inlineRadio2"
-                              value="12"
-                            />
-                            <label class="form-check-label" for="inlineRadio2">12%</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input
-                              class="form-check-input"
-                              type="radio"
-                              name="inlineRadioOptions"
-                              id="inlineRadio3"
-                              value="15"
-                            />
-                            <label class="form-check-label" for="inlineRadio2">15%</label>
-                          </div>
-                        </div>
-                        <div class="mb-3">
-                          <table>
-                            <tr>
-                              <td style="width:90%; height: 50px">Listing Fee (USD)</td>
-                              <td id="">$0.20</td>
-                            </tr>
-                            <tr>
-                              <td style="width:90%; height: 50px">Transaction Fee (6.5%) (includes shipping)</td>
-                              <td id="transaction_fee">$0.00</td>
-                            </tr>
-                            <tr>
-                              <td style="width:90%; height: 50px"> Payment Processing Fee</td>
-                              <td id="payment_processing_fee">$0.00</td>
-                            </tr>
-                          </table>
-                          <div id="total_fees" style="text-align: right; padding-top: 10px;">Total Fees: $0.00</div>
 
-                          <h5 class="mb-0" style="padding-top: 30px;">Estimated Profit</h5>
-                          <br>
-                        
-                        </div>
-                        <div class="mb-3">
-                          <table>
-                            <tr>
-                              <td style="width:90%; height: 50px">Price (incl. Shipping)</td>
-                              <td id="pirce_include_s">$0.00</td>
-                            </tr>
-                            <tr>
-                              <td style="width:90%; height: 50px">Total Costs </td>
-                              <td id="total_cost_1">$0.00</td>
-                            </tr>
-                            <tr>
-                              <td style="width:90%; height: 50px">Total Fees</td>
-                              <td id="total_fees_1">$0.00</td>
-                            </tr>
-                            <tr>
-                              <td style="width:90%; height: 50px">Estimated Profit</td>
-                              <td id="estimated_profit">$0.00</td>
-                            </tr>
-                          </table>
-                          <div id="estimated_margin" style="text-align: right; padding-top: 10px;">Estimated Margin: 0%</div>
-                        </div>
-                        
-                        <!-- <button type="submit" class="btn btn-primary">Send</button> -->
-                      </form>
+                    <br>
+                    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                      <div class="nav-item d-flex align-items-center">
+                        <button id="search_btn_comparison_2" class="btn" onclick="get_comparison_data2()"><i class="bx bx-search fs-4 lh-0"></i></button>
+                        <input
+                          type="search"
+                          class="form-control border-1"
+                          placeholder="Search..."
+                          aria-label="Search..."
+                          id="Search_text_comparison2"
+                        />
+                      </div>
                     </div>
+
+
+                    <div id="compasrion_spinner_loading2"  class="container-xxl flex-grow-1 container-p-y">
+                      <br><br>
+                    <div class="row">
+                        <!-- Large -->
+                        <div class="col-2"></div>
+                        <div class="col-10">
+                          
+                            <div class="preloader">
+                            <div class="preloader__square"></div>
+                            <div class="preloader__square"></div>
+                            <div class="preloader__square"></div>
+                            <div class="preloader__square"></div>
+                          </div>
+                          <!-- <div class="status"><h1 style="padding-left: 30px;">Loading<span class="status__dot">.</span><span class="status__dot">.</span><span class="status__dot">.</span></h1></div> -->
+
+                        </div>
+                        <!-- <div class="col-4"></div> -->
+                    </div>
+                  </div>
+
+                     <div id="temp2">
+                      <br><br><br>
+                      <h1 align="center"> 2</h1>
+                      <br><br><br>
+                    </div>
+
+
+                       <div id="main2">
+                          <div class="card-body">
+                          <div class="row">   
+                            <div class="col-2"></div>
+                                <div class="col-10">
+                                  <div class="row">
+                                    <div id="cross2" class=" col-3"><img src="assets/img/icons/cross.png" style="width: 30px; height: 30px;"></div>
+                                    <div id="tick2" class=" col-3"><img src="assets/img/icons/tick.png" style="width: 50px; height: 50px;"></div>
+                                     <div class=" col-9"><h4>Long Tail</h4></div>
+                                   </div>  
+                                 </div>
+                               </div>
+                          <!-- <div class="col-4"></div> -->
+                          </div>
+
+                          <div class="card-body">
+                            <div><h3>Searches</h3></div>
+                            <div class="row">
+                                  <div align="center">
+                                       <div><h4 id="searches_2"></h4></div>
+                                   </div>
+                            </div>
+                          </div>
+
+                          <div class="card-body">
+                            <div><h3>Engagement</h3></div>
+                            <div class="row">
+                                  <div align="center">
+                                       <div><h4 id="Engagement_2"></h4></div>
+                                   </div>
+                            </div>
+                          </div>
+
+                          <div class="card-body">
+                            <div><h3>Lowest Price</h3></div>
+                            <div class="row">
+                                  <div align="center">
+                                       <div><h4 id="l_price_2"></h4></div>
+                                   </div>
+                            </div>
+                          </div>
+
+                          <div class="card-body">
+                            <div><h3>Average Price</h3></div>
+                            <div class="row">
+                                  <div align="center">
+                                       <div><h4 id="m_price_2"></h4></div>
+                                   </div>
+                            </div>
+                          </div>
+
+                          <div class="card-body">
+                            <div><h3>Highest Price</h3></div>
+                            <div class="row">
+                                  <div align="center">
+                                       <div><h4 id="h_price_2"></h4></div>
+                                   </div>
+                            </div>
+                          </div>
+
+                          <div class="card-body">
+                            <div><h3>Top Tags</h3></div>
+                            <div class="row">
+                                  <div align="center">
+                                       <div><h4><ol id="top_tags_2"></ol></h4></div>
+                                   </div>
+                            </div>
+                          </div>
+
+
+                        </div>
+                  
+                  
+                  </div>
+                </div>
+                <div class="col-xl">
+                  <div class="card mb-4">
+
+                    <br>
+                    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                      <div class="nav-item d-flex align-items-center">
+                        <button id="search_btn_comparison_3" class="btn" onclick="get_comparison_data3()"><i class="bx bx-search fs-4 lh-0"></i></button>
+                        <input
+                          type="search"
+                          class="form-control border-1"
+                          placeholder="Search..."
+                          aria-label="Search..."
+                          id="Search_text_comparison3"
+                        />
+                      </div>
+
+                    </div>
+
+
+                    <div id="compasrion_spinner_loading3"  class="container-xxl flex-grow-1 container-p-y">
+                      <br><br>
+                    <div class="row">
+                        <!-- Large -->
+                        <div class="col-2"></div>
+                        <div class="col-10">
+                          
+                            <div class="preloader">
+                            <div class="preloader__square"></div>
+                            <div class="preloader__square"></div>
+                            <div class="preloader__square"></div>
+                            <div class="preloader__square"></div>
+                          </div>
+                          <!-- <div class="status"><h1 style="padding-left: 30px;">Loading<span class="status__dot">.</span><span class="status__dot">.</span><span class="status__dot">.</span></h1></div> -->
+
+                        </div>
+                        <!-- <div class="col-4"></div> -->
+                    </div>
+                  </div>
+
+                     <div id="temp3">
+                      <br><br><br>
+                      <h1 align="center"> 3</h1>
+                      <br><br><br>
+                    </div>
+                  
+                        <div id="main3">
+                          <div class="card-body">
+                          <div class="row">   
+                            <div class="col-2"></div>
+                                <div class="col-10">
+                                  <div class="row">
+                                    <div id="cross3" class=" col-3"><img src="assets/img/icons/cross.png" style="width: 30px; height: 30px;"></div>
+                                    <div id="tick3" class=" col-3"><img src="assets/img/icons/tick.png" style="width: 50px; height: 50px;"></div>
+                                     <div class=" col-9"><h4>Long Tail</h4></div>
+                                   </div>  
+                                 </div>
+                               </div>
+                          <!-- <div class="col-4"></div> -->
+                          </div>
+
+                          <div class="card-body">
+                            <div><h3>Searches</h3></div>
+                            <div class="row">
+                                  <div align="center">
+                                       <div><h4 id="searches_3"></h4></div>
+                                   </div>
+                            </div>
+                          </div>
+
+                          <div class="card-body">
+                            <div><h3>Engagement</h3></div>
+                            <div class="row">
+                                  <div align="center">
+                                       <div><h4 id="Engagement_3"></h4></div>
+                                   </div>
+                            </div>
+                          </div>
+
+                          <div class="card-body">
+                            <div><h3>Lowest Price</h3></div>
+                            <div class="row">
+                                  <div align="center">
+                                       <div><h4 id="l_price_3"></h4></div>
+                                   </div>
+                            </div>
+                          </div>
+
+                          <div class="card-body">
+                            <div><h3>Average Price</h3></div>
+                            <div class="row">
+                                  <div align="center">
+                                       <div><h4 id="m_price_3"></h4></div>
+                                   </div>
+                            </div>
+                          </div>
+
+                          <div class="card-body">
+                            <div><h3>Highest Price</h3></div>
+                            <div class="row">
+                                  <div align="center">
+                                       <div><h4 id="h_price_3"></h4></div>
+                                   </div>
+                            </div>
+                          </div>
+
+                          <div class="card-body">
+                            <div><h3>Top Tags</h3></div>
+                            <div class="row">
+                                  <div align="center">
+                                       <div><h4><ol id="top_tags_3"></ol></h4></div>
+                                   </div>
+                            </div>
+                          </div>
+
+
+                        </div>
+                  
                   </div>
                 </div>
               </div>
@@ -409,7 +608,7 @@
             <!-- / Content -->
 
             <!-- Footer -->
-            <footer class="content-footer footer bg-footer-theme" id="footer_calculator">
+            <footer class="content-footer footer bg-footer-theme" id="footer_comparison">
               <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
                 <div class="mb-2 mb-md-0">
                   ©
@@ -492,7 +691,11 @@
 
 
 <script>
-  
+
+
+
+
+
   function read_more_fun() {
     $('#truncate_1').removeClass('truncate');
     $("#read_more").hide();

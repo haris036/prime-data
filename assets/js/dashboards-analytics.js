@@ -169,9 +169,320 @@
 
 
  
+
+
+
+$("#compasrion_spinner_loading1").hide();
+$("#main1").hide();
+
+function get_comparison_data1()
+{
+  $("#main1").hide();
+  $("#temp1").hide();
+  console.log("i am here");  
+  document.getElementById("search_btn_comparison_1").disabled = true;
+  var Searched_value = document.getElementById("Search_text_comparison1").value;
+  $("#compasrion_spinner_loading1").show();
+
+  $("#searches_1").empty();
+  $("#Engagement_1").empty();
+  $("#l_price_1").empty();
+  $("#m_price_1").empty();
+  $("#h_price_1").empty();
+  $("#top_tags_1").empty();
+
+
+
+   function readTextFile(file, callback) {
+      var rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+          if (rawFile.readyState === 4 && rawFile.status == "200") {
+              callback(rawFile.responseText);
+          }
+      }
+      rawFile.send(null);
+      }
+
+    // calling above function(
+    url = "http://eprimedata.com/api/v1/getListing/" + Searched_value
+    readTextFile(url, function(text){
+        var json_data = JSON.parse(text); //parse JSON
+        console.log(json_data);  
+        long_tail_keyword = json_data['long_tail_keyword'];
+        if (long_tail_keyword == true)
+        {
+           $("#cross1").hide();
+           $("#tick1").show();
+
+        }
+        else
+        {
+           $("#cross1").show();
+           $("#tick1").hide();
+        }
+        shipping_days_price = json_data['shipping_day_prices'];
+        searches = json_data['avg_searches'];
+        avg_price = shipping_days_price['average_price'];
+        max_price = shipping_days_price['maximum_price'];
+        min_price = shipping_days_price['minimum_price'];
+
+        historical_metrices_data = json_data['historical_metrices']['trends'];
+        for (let x in historical_metrices_data)
+        {
+          engagement_1 = historical_metrices_data[x].value;
+        }
+
+        popular_tags_data = json_data['popular_tags'];
+        
+        var popular_tags_names = [], popular_tags_names_data=[];
+        for (let x in popular_tags_data)
+        {
+          for (let y in popular_tags_data-x-1)
+          {
+            if (popular_tags_data[y+1][1].count>popular_tags_data[y][1].count)
+            {
+              [popular_tags_data[y + 1][0],popular_tags_data[y][0]] = [popular_tags_data[y][0],popular_tags_data[y + 1][0]]
+              [popular_tags_data[y + 1][1].count,popular_tags_data[y][1].count] = [popular_tags_data[y][1].count,popular_tags_data[y + 1][1].count]
+            }
+          }
+          
+        }
+        max_xount = 0;
+        for (let x in popular_tags_data)
+        {
+          if (max_xount<4)
+          {
+              $("#top_tags_1").append("<li>"+popular_tags_data[x][0]+"</li>");
+              max_xount = max_xount+1;
+          }
+        }
+        console.log(searches); 
+        $("#searches_1").append(searches.toFixed(0));
+        $("#Engagement_1").append(engagement_1.toFixed(0));
+        $("#l_price_1").append(min_price.toFixed(0));
+        $("#m_price_1").append(avg_price.toFixed(0));
+        $("#h_price_1").append(max_price.toFixed(0));
+
+        $("#compasrion_spinner_loading1").hide();
+        $("#main1").show();
+        document.getElementById("search_btn_comparison_1").disabled = false;
+      })
+
+  
+}
+
+
+$("#compasrion_spinner_loading2").hide();
+$("#main2").hide();
+
+function get_comparison_data2()
+{
+  $("#main2").hide();
+  $("#temp2").hide();
+  console.log("i am here");  
+  document.getElementById("search_btn_comparison_2").disabled = true;
+  var Searched_value = document.getElementById("Search_text_comparison2").value;
+  $("#compasrion_spinner_loading2").show();
+
+  $("#searches_2").empty();
+  $("#Engagement_2").empty();
+  $("#l_price_2").empty();
+  $("#m_price_2").empty();
+  $("#h_price_2").empty();
+  $("#top_tags_2").empty();
+
+
+
+   function readTextFile(file, callback) {
+      var rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+          if (rawFile.readyState === 4 && rawFile.status == "200") {
+              callback(rawFile.responseText);
+          }
+      }
+      rawFile.send(null);
+      }
+
+    // calling above function(
+    url = "http://eprimedata.com/api/v1/getListing/" + Searched_value
+    readTextFile(url, function(text){
+        var json_data = JSON.parse(text); //parse JSON
+        console.log(json_data);  
+        long_tail_keyword = json_data['long_tail_keyword'];
+        if (long_tail_keyword == true)
+        {
+           $("#cross2").hide();
+           $("#tick2").show();
+
+        }
+        else
+        {
+           $("#cross2").show();
+           $("#tick2").hide();
+        }
+        shipping_days_price = json_data['shipping_day_prices'];
+        searches = json_data['avg_searches'];
+        avg_price = shipping_days_price['average_price'];
+        max_price = shipping_days_price['maximum_price'];
+        min_price = shipping_days_price['minimum_price'];
+
+        historical_metrices_data = json_data['historical_metrices']['trends'];
+        for (let x in historical_metrices_data)
+        {
+          engagement_2 = historical_metrices_data[x].value;
+        }
+
+        popular_tags_data = json_data['popular_tags'];
+        
+        var popular_tags_names = [], popular_tags_names_data=[];
+        for (let x in popular_tags_data)
+        {
+          for (let y in popular_tags_data-x-1)
+          {
+            if (popular_tags_data[y+1][1].count>popular_tags_data[y][1].count)
+            {
+              [popular_tags_data[y + 1][0],popular_tags_data[y][0]] = [popular_tags_data[y][0],popular_tags_data[y + 1][0]]
+              [popular_tags_data[y + 1][1].count,popular_tags_data[y][1].count] = [popular_tags_data[y][1].count,popular_tags_data[y + 1][1].count]
+            }
+          }
+          
+        }
+        max_xount = 0;
+        for (let x in popular_tags_data)
+        {
+          if (max_xount<4)
+          {
+              $("#top_tags_2").append("<li>"+popular_tags_data[x][0]+"</li>");
+              max_xount = max_xount+1;
+          }
+        }
+        console.log(searches); 
+        $("#searches_2").append(searches.toFixed(0));
+        $("#Engagement_2").append(engagement_2.toFixed(0));
+        $("#l_price_2").append(min_price.toFixed(0));
+        $("#m_price_2").append(avg_price.toFixed(0));
+        $("#h_price_2").append(max_price.toFixed(0));
+
+        $("#compasrion_spinner_loading2").hide();
+        $("#main2").show();
+        document.getElementById("search_btn_comparison_2").disabled = false;
+      })
+
+  
+}
+
+
+$("#compasrion_spinner_loading3").hide();
+$("#main3").hide();
+
+function get_comparison_data3()
+{
+  $("#main3").hide();
+  $("#temp3").hide();
+  console.log("i am here");  
+  document.getElementById("search_btn_comparison_3").disabled = true;
+  var Searched_value = document.getElementById("Search_text_comparison3").value;
+  $("#compasrion_spinner_loading3").show();
+
+  $("#searches_3").empty();
+  $("#Engagement_3").empty();
+  $("#l_price_3").empty();
+  $("#m_price_3").empty();
+  $("#h_price_3").empty();
+  $("#top_tags_3").empty();
+
+
+
+   function readTextFile(file, callback) {
+      var rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+          if (rawFile.readyState === 4 && rawFile.status == "200") {
+              callback(rawFile.responseText);
+          }
+      }
+      rawFile.send(null);
+      }
+
+    // calling above function(
+    url = "http://eprimedata.com/api/v1/getListing/" + Searched_value
+    readTextFile(url, function(text){
+        var json_data = JSON.parse(text); //parse JSON
+        console.log(json_data);  
+        long_tail_keyword = json_data['long_tail_keyword'];
+        if (long_tail_keyword == true)
+        {
+           $("#cross3").hide();
+           $("#tick3").show();
+
+        }
+        else
+        {
+           $("#cross3").show();
+           $("#tick3").hide();
+        }
+        shipping_days_price = json_data['shipping_day_prices'];
+        searches = json_data['avg_searches'];
+        avg_price = shipping_days_price['average_price'];
+        max_price = shipping_days_price['maximum_price'];
+        min_price = shipping_days_price['minimum_price'];
+
+        historical_metrices_data = json_data['historical_metrices']['trends'];
+        for (let x in historical_metrices_data)
+        {
+          engagement_3 = historical_metrices_data[x].value;
+        }
+
+        popular_tags_data = json_data['popular_tags'];
+        
+        var popular_tags_names = [], popular_tags_names_data=[];
+        for (let x in popular_tags_data)
+        {
+          for (let y in popular_tags_data-x-1)
+          {
+            if (popular_tags_data[y+1][1].count>popular_tags_data[y][1].count)
+            {
+              [popular_tags_data[y + 1][0],popular_tags_data[y][0]] = [popular_tags_data[y][0],popular_tags_data[y + 1][0]]
+              [popular_tags_data[y + 1][1].count,popular_tags_data[y][1].count] = [popular_tags_data[y][1].count,popular_tags_data[y + 1][1].count]
+            }
+          }
+          
+        }
+        max_xount = 0;
+        for (let x in popular_tags_data)
+        {
+          if (max_xount<4)
+          {
+              $("#top_tags_3").append("<li>"+popular_tags_data[x][0]+"</li>");
+              max_xount = max_xount+1;
+          }
+        }
+        console.log(searches); 
+        $("#searches_3").append(searches.toFixed(0));
+        $("#Engagement_3").append(engagement_3.toFixed(0));
+        $("#l_price_3").append(min_price.toFixed(0));
+        $("#m_price_3").append(avg_price.toFixed(0));
+        $("#h_price_3").append(max_price.toFixed(0));
+
+        $("#compasrion_spinner_loading3").hide();
+        $("#main3").show();
+        document.getElementById("search_btn_comparison_3").disabled = false;
+      })
+
+  
+}
+
+
+
+
+
 $("#Calculator_main").show();
   $("#calculator_spinner_loading").hide();
-
 function calculator(){
   $("#Calculator_main").hide();
   $("#calculator_spinner_loading").show();
