@@ -1167,7 +1167,9 @@ const shipping_price_chartsS = document.querySelector('#shipping_price_chart'),
           series: [{
           name: "Listing",
           data: shipping_price_data
+          
         }],
+        colors: [config.colors.main_colour],
           chart: {
           height: 350,
           type: 'scatter',
@@ -1353,7 +1355,7 @@ const shipping_price_chartsS = document.querySelector('#shipping_price_chart'),
           endingShape: 'rounded'
         }
       },
-      colors: [config.colors.secondary, config.colors.info],
+      colors: [config.colors.main_colour, config.colors.main_colour],
       dataLabels: {
         enabled: false
       },
@@ -1615,7 +1617,7 @@ const shipping_price_chartsS = document.querySelector('#shipping_price_chart'),
           endingShape: 'rounded'
         }
       },
-      colors: [config.colors.warning, config.colors.info],
+      colors: [config.colors.main_colour, config.colors.main_colour],
       dataLabels: {
         enabled: false
       },
