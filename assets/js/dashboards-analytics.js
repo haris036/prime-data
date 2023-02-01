@@ -206,7 +206,7 @@ function get_comparison_data1()
       }
 
     // calling above function(
-    url = "http://eprimedata.com/api/v1/getListing/" + Searched_value
+    url = "https://eprimedata.com/api/v1/getListing/" + Searched_value
     readTextFile(url, function(text){
         var json_data = JSON.parse(text); //parse JSON
         console.log(json_data);  
@@ -308,7 +308,7 @@ function get_comparison_data2()
       }
 
     // calling above function(
-    url = "http://eprimedata.com/api/v1/getListing/" + Searched_value
+    url = "https://eprimedata.com/api/v1/getListing/" + Searched_value
     readTextFile(url, function(text){
         var json_data = JSON.parse(text); //parse JSON
         console.log(json_data);  
@@ -410,7 +410,7 @@ function get_comparison_data3()
       }
 
     // calling above function(
-    url = "http://eprimedata.com/api/v1/getListing/" + Searched_value
+    url = "https://eprimedata.com/api/v1/getListing/" + Searched_value
     readTextFile(url, function(text){
         var json_data = JSON.parse(text); //parse JSON
         console.log(json_data);  
@@ -496,7 +496,7 @@ function calculator(){
   var Renewing = document.getElementById("Renewing").value;
   var checkedValue = document.querySelector('.form-check-input:checked').value;
   
-  var url = "http://eprimedata.com/api/v1/calculateProfit?";
+  var url = "https://eprimedata.com/api/v1/calculateProfit?";
   var data_str = "cust_price="+Price+"&cust_shipping_price="+Shipping_P+"&cust_coupon="+Discount+"&labor_cost="+Labour_C+"&material_cost="+Material_C+"&shipping_cost="+Shipping_C+"&etsy_ads="+Esty_Ads+"&renewing="+Renewing+"&offside_ads_fee_per="+checkedValue ;
   var final_url = url+data_str;
   console.log(final_url);
@@ -661,12 +661,12 @@ function single_listing_jsondata(){
 
   //   console.log(data); // JSON data parsed by `data.json()` call
   // });
-       console.log("http://eprimedata.com/api/v1/getSingleListing/"+Searched_single_f)
+       console.log("https://eprimedata.com/api/v1/getSingleListing/"+Searched_single_f)
 
         // calling above function(
-        url = "http://eprimedata.com/api/v1/getSingleListing/"+Searched_single_f
+        url = "https://eprimedata.com/api/v1/getSingleListing/"+Searched_single_f
         // readTextFile(url, function(text){
-        postData("http://eprimedata.com/api/v1/getSingleListing/"+Searched_single_f, { answer: 42 })
+        postData("https://eprimedata.com/api/v1/getSingleListing/"+Searched_single_f, { answer: 42 })
         .then((data) => {
         json_data = data; 
         //parse JSON
@@ -882,7 +882,7 @@ document.getElementById("search_btn").disabled = true;
       }
 
     // calling above function(
-    url = "http://eprimedata.com/api/v1/getListing/" + Searched_value
+    url = "https://eprimedata.com/api/v1/getListing/" + Searched_value
     readTextFile(url, function(text){
         var json_data = JSON.parse(text); //parse JSON
         console.log(json_data);  

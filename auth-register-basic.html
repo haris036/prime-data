@@ -298,7 +298,7 @@
       }
 
 
-    postData1("http://eprimedata.com/api/v1/saveUser?email="+email_user+"&password="+pass+"&is_subscribed=N", { answer: 42 })
+    postData1("https://eprimedata.com/api/v1/saveUser?email="+email_user+"&password="+pass+"&is_subscribed=N", { answer: 42 })
           .then((data) => {
             console.log(data);
             if (data == "User already exists with same email id")
