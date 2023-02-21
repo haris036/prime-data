@@ -1,0 +1,53 @@
+@use 'styles/scss/variables.scss' as vars;
+
+
+.register-form-wrapper {
+  margin-top: 22px;
+
+
+  .auth-steps {
+    margin-bottom: 60px;
+    margin-top: 30px;
+    padding: 0 30px;
+  }
+
+
+  .dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #D1D5DB;
+    position: relative;
+
+
+    &:after {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: #D1D5DB;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+
+
+    &.active {
+      border: 2px solid vars.$primary-color;
+
+      &:after {
+        background-color: vars.$primary-color;
+      }
+
+
+    }
+
+
+  }
+
+  .custom-btn {
+    margin: 40px 0 37px 0;
+  }
+}
