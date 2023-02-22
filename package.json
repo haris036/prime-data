@@ -1,8 +1,7 @@
 {
-  "name": "sneat-bootstrap-html-admin-template-free",
-  "description": "Most Powerful & Comprehensive Free Bootstrap 5 HTML Admin Dashboard Template built for developers! 🚀",
-  "license": "MIT",
-  "version": "1.0.0",
+  "name": "eprime-data",
+  "version": "0.1.0",
+  "private": true,
   "author": {
     "name": "ThemeSelection",
     "url": "https://themeselection.com/"
@@ -10,7 +9,6 @@
   "bugs": {
     "url": "https://github.com/themeselection/sneat-html-admin-template-free/issues"
   },
-  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/themeselection/sneat-html-admin-template-free.git"
@@ -49,7 +47,20 @@
     "highlight.js": "~9.17.1",
     "jquery": "~3.5.1",
     "masonry-layout": "~4.2.1",
-    "perfect-scrollbar": "~1.5.1"
+    "perfect-scrollbar": "~1.5.1",
+	"@ant-design/icons": "^5.0.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "antd": "^5.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0",
+    "react-scripts": "5.0.1",
+    "react-verification-input": "^3.1.2",
+    "sass": "^1.57.1",
+    "web-vitals": "^2.1.0"
+	
   },
   "devDependencies": {
     "@babel/core": "~7.7.7",
@@ -106,5 +117,29 @@
       }
     ],
     "default": "development"
+  }
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
