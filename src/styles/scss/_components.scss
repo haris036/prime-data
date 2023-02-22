@@ -1,0 +1,79 @@
+.custom-input-wrapper {
+  border-radius: 8px;
+  width: 100%;
+  background-color: #ececec;
+  height: 60px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 15px 20px;
+
+  .icon {
+    width: 20px;
+    height: auto;
+  }
+
+  .custom-input-inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    label {
+      font-size: $font-size-small;
+      color: $text-color-light-dark;
+      margin-bottom: 5px;
+    }
+
+    input {
+      outline: none;
+      border: 0;
+      font-weight: $font-weight-bold;
+      width: 100%;
+      background-color: transparent;
+    }
+  }
+}
+
+.custom-btn {
+  height: 55px;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-normal;
+}
+
+.section-heading-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h2,
+  p {
+    margin: 0;
+  }
+  .sub-heading {
+    margin-top: 5px;
+    max-width: 500px;
+  }
+}
+
+.plan-btn {
+  color: $blue;
+  background-color: #f8f4ff;
+  border: 0;
+
+  &:hover {
+    color: $blue !important;
+    opacity: 0.9;
+  }
+}
+
+.plan-btn-pro {
+  background-color: $blue;
+  color: $white;
+  border: 0;
+  &:hover {
+    color: $white !important;
+    opacity: 0.9;
+  }
+}

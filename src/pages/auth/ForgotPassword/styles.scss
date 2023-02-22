@@ -1,0 +1,52 @@
+@use 'styles/scss/variables.scss' as vars;
+
+.forgot-password-wrapper {
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 100px;
+
+    .line-height-25 {
+        max-width: 425px;
+        margin-bottom: 69px;
+
+    }
+
+    .vi__wrapper {
+        width: 100%;
+    }
+
+    .v-container {
+        width: 100%;
+        margin-bottom: 70px;
+    }
+
+
+    .v-character {
+        background: #ECECEC;
+        border-radius: 8px;
+        border: 0;
+        height: 63px;
+        font-weight: 200;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 5px;
+
+
+    }
+
+    .character--selected {
+        background-color: white;
+        border: 0;
+        outline: 1px solid vars.$primary-color;
+        color: vars.$primary-color;
+    }
+
+
+
+    .register-text {
+        margin-top: auto;
+    }
+}
