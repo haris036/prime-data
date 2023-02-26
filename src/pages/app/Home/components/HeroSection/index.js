@@ -1,7 +1,11 @@
 import { Button, Col, Row } from "antd";
 import { HERO_RIGHT_IMAGE } from "assets";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+    
+  const navigate = useNavigate();
+  
   return (
     <section className="hero-section container" id="hero-section">
       <Row className="flex-1">
@@ -25,7 +29,7 @@ const HeroSection = () => {
               customizable KPIs and dashboards that go way beyond traditional
               reporting, while simplifying data management and workflows.
             </p>
-            <Button type="primary" className="custom-btn btn-shadow">
+            <Button type="primary" className="custom-btn btn-shadow" click={(} => navigate('/auth/register')}>
               Sign up Now
             </Button>
           </div>
