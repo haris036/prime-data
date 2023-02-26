@@ -1,9 +1,11 @@
 import { Button, Col, Row, Grid } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const { useBreakpoint } = Grid;
 
 const GrowthSection = () => {
   const { md: isMd } = useBreakpoint();
+   const navigate = useNavigate();
 
   return (
     <section className="growth-section ">
@@ -25,6 +27,7 @@ const GrowthSection = () => {
               type="primary"
               className="font-bold btn-shadow btn-orange"
               size="large"
+              click={() => navigate('/auth/register')}
             >
               {"Sign Up Now"}
             </Button>
