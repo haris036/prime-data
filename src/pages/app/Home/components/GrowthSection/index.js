@@ -27,7 +27,7 @@ const GrowthSection = () => {
               type="primary"
               className="font-bold btn-shadow btn-orange"
               size="large"
-              click={() => navigate('/auth/register')}
+              onClick={() => navigate('/auth/register')}
             >
               {"Sign Up Now"}
             </Button>
