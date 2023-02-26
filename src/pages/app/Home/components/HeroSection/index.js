@@ -29,7 +29,7 @@ const HeroSection = () => {
               customizable KPIs and dashboards that go way beyond traditional
               reporting, while simplifying data management and workflows.
             </p>
-            <Button type="primary" className="custom-btn btn-shadow" click={(} => navigate('/auth/register')}>
+            <Button type="primary" className="custom-btn btn-shadow" onClick={(} => navigate('/auth/register')}>
               Sign up Now
             </Button>
           </div>
