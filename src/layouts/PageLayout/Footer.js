@@ -9,11 +9,10 @@ const PageFooter = () => {
           <Col xs={24} sm={6} className="footer-logo">
             <img src={FOOTER_LOGO} />
             <div className="contact-info">
-              <p>4850 A. Canal Road, Plot #174</p>
-              <p>Shadman, Lahore</p>
-              <p>Pakistan</p>
-              <p>+92-42-2569358</p>
-              <p>+92-336-2569358</p>
+              <p>9 Ellingwood Court, Markham,</p>
+              <p>ON, L3R8A8,</p>
+              <p>Canada</p>
+              <p>+1 (416) 918-7292</p>
             </div>
           </Col>
           <Col xs={24} sm={18}>
@@ -44,7 +43,7 @@ const Resources = () => (
       <p className="m-0">How to Sell on Etsy</p>
       <p className="m-0">Eyst PPC Playbook</p>
     </div>
-    <h4 className="light-blue-heading letter-spacing-2">HOW-T0</h4>
+    <h4 className="light-blue-heading letter-spacing-2">HOW-TO</h4>
     <div className="resources-text-wrapper">
       <p className="m-0">Seller Podcast: Follow the Data</p>
     </div>
