@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.b0e91a4b.css",
-    "main.js": "/static/js/main.7cc49bd6.js",
-    "static/js/787.8de0af6c.chunk.js": "/static/js/787.8de0af6c.chunk.js",
+    "main.css": "/static/css/main.0a1a9a2d.css",
+    "main.js": "/static/js/main.c9e1a9d1.js",
+    "static/js/787.0a2779a4.chunk.js": "/static/js/787.0a2779a4.chunk.js",
     "static/media/learn-more.png": "/static/media/learn-more.1545d12374c0ed4769fc.png",
     "static/media/02 - Dashboard - Signle Search 1.png": "/static/media/02 - Dashboard - Signle Search 1.46cf3839759772db6414.png",
     "static/media/03 - Calculator 1.png": "/static/media/03 - Calculator 1.89122d4dea31d9c2c78f.png",
@@ -24,8 +24,8 @@
     "static/media/🦆 icon _trophy_.svg": "/static/media/🦆 icon _trophy_.cc352e20afe2cc6bbea25b481ca07bed.svg",
     "static/media/search-icon-comparison.svg": "/static/media/search-icon-comparison.86aa1260eb195bf9e88d0b8c5aa9d368.svg",
     "static/media/ic_search (2).svg": "/static/media/ic_search (2).f3c641e1aadde26168f67cdc78bbf09a.svg",
-    "static/media/🦆 icon _list numbers_.svg": "/static/media/🦆 icon _list numbers_.638386cc58226d9ae3acfb3346608a59.svg",
     "index.html": "/index.html",
+    "static/media/🦆 icon _list numbers_.svg": "/static/media/🦆 icon _list numbers_.638386cc58226d9ae3acfb3346608a59.svg",
     "static/media/🦆 icon _calendar_.svg": "/static/media/🦆 icon _calendar_.637b3e9a5331af5d6a4dd2cdad446efe.svg",
     "static/media/🦆 icon _heart_.svg": "/static/media/🦆 icon _heart_.2407c78cd24c54156cf4dff64f9d36f6.svg",
     "static/media/🦆 icon _map pin_.svg": "/static/media/🦆 icon _map pin_.664451fc2b729216d37c6a644c477840.svg",
@@ -42,12 +42,12 @@
     "static/media/convert-icon.svg": "/static/media/convert-icon.feefb3f270e5cecd10705cd1e87143a7.svg",
     "static/media/arrow-down.svg": "/static/media/arrow-down.527fc0ef2943cd4a478746430ddad4d0.svg",
     "static/media/arrow-up.svg": "/static/media/arrow-up.1ec195bdeee9bd8f0444aa55eeff3969.svg",
-    "main.b0e91a4b.css.map": "/static/css/main.b0e91a4b.css.map",
-    "main.7cc49bd6.js.map": "/static/js/main.7cc49bd6.js.map",
-    "787.8de0af6c.chunk.js.map": "/static/js/787.8de0af6c.chunk.js.map"
+    "main.0a1a9a2d.css.map": "/static/css/main.0a1a9a2d.css.map",
+    "main.c9e1a9d1.js.map": "/static/js/main.c9e1a9d1.js.map",
+    "787.0a2779a4.chunk.js.map": "/static/js/787.0a2779a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0e91a4b.css",
-    "static/js/main.7cc49bd6.js"
+    "static/css/main.0a1a9a2d.css",
+    "static/js/main.c9e1a9d1.js"
   ]
 }
