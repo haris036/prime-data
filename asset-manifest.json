@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0a1a9a2d.css",
-    "main.js": "/static/js/main.e5fbf74e.js",
+    "main.js": "/static/js/main.e5b1ed8d.js",
     "static/js/787.0a2779a4.chunk.js": "/static/js/787.0a2779a4.chunk.js",
     "static/media/learn-more.png": "/static/media/learn-more.1545d12374c0ed4769fc.png",
     "static/media/02 - Dashboard - Signle Search 1.png": "/static/media/02 - Dashboard - Signle Search 1.46cf3839759772db6414.png",
@@ -43,11 +43,11 @@
     "static/media/arrow-down.svg": "/static/media/arrow-down.527fc0ef2943cd4a478746430ddad4d0.svg",
     "static/media/arrow-up.svg": "/static/media/arrow-up.1ec195bdeee9bd8f0444aa55eeff3969.svg",
     "main.0a1a9a2d.css.map": "/static/css/main.0a1a9a2d.css.map",
-    "main.e5fbf74e.js.map": "/static/js/main.e5fbf74e.js.map",
+    "main.e5b1ed8d.js.map": "/static/js/main.e5b1ed8d.js.map",
     "787.0a2779a4.chunk.js.map": "/static/js/787.0a2779a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0a1a9a2d.css",
-    "static/js/main.e5fbf74e.js"
+    "static/js/main.e5b1ed8d.js"
   ]
 }
