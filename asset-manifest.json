@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0a1a9a2d.css",
-    "main.js": "/static/js/main.0975309c.js",
+    "main.css": "/static/css/main.479558ac.css",
+    "main.js": "/static/js/main.5db92845.js",
     "static/js/787.0a2779a4.chunk.js": "/static/js/787.0a2779a4.chunk.js",
     "static/media/learn-more.png": "/static/media/learn-more.1545d12374c0ed4769fc.png",
     "static/media/02 - Dashboard - Signle Search 1.png": "/static/media/02 - Dashboard - Signle Search 1.46cf3839759772db6414.png",
@@ -42,12 +42,12 @@
     "static/media/convert-icon.svg": "/static/media/convert-icon.feefb3f270e5cecd10705cd1e87143a7.svg",
     "static/media/arrow-down.svg": "/static/media/arrow-down.527fc0ef2943cd4a478746430ddad4d0.svg",
     "static/media/arrow-up.svg": "/static/media/arrow-up.1ec195bdeee9bd8f0444aa55eeff3969.svg",
-    "main.0a1a9a2d.css.map": "/static/css/main.0a1a9a2d.css.map",
-    "main.0975309c.js.map": "/static/js/main.0975309c.js.map",
+    "main.479558ac.css.map": "/static/css/main.479558ac.css.map",
+    "main.5db92845.js.map": "/static/js/main.5db92845.js.map",
     "787.0a2779a4.chunk.js.map": "/static/js/787.0a2779a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a1a9a2d.css",
-    "static/js/main.0975309c.js"
+    "static/css/main.479558ac.css",
+    "static/js/main.5db92845.js"
   ]
 }
